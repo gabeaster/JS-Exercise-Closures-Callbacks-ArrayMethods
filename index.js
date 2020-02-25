@@ -139,7 +139,10 @@ function processProduct(num1, num2, callback) {
  * should return "sad".
 */
 function processContains(item, list, callback) {
-  /* CODE HERE */
+  list.map(function(item){
+    return list.includes(item);
+  })
+  return callback(list.includes(item));
 }
 
 /**
@@ -167,7 +170,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
-
+const runners = require("./data/runners.js")
 // A local community center is holding a fund raising 5k fun run and has invited
 // 50 small businesses to make a small donation on their behalf for some much needed
 // updates to their facilities. Each business has assigned a representative
@@ -183,8 +186,12 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+function getFullNames(runners) {
+  const fullNames = [];
+  runners.forEach(function(currentValue){
+    return fullNames.push(`${runners.last_name}, ${runners.first_name}`)
+  });
+  return fullNames;
 }
 
 /**
