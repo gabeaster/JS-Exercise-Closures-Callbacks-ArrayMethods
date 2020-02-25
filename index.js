@@ -189,7 +189,7 @@ const runners = require("./data/runners.js")
 function getFullNames(runners) {
   const fullNames = [];
   runners.forEach(function(currentValue){
-    return fullNames.push(`${runners.last_name}, ${runners.first_name}`)
+    return fullNames.push(`${currentValue.last_name}, ${currentValue.first_name}`)
   });
   return fullNames;
 }
